@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>zahraaaa cantiiii dannn imupppp❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      background: linear-gradient(to top right, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      animation: fadeInDown 2s ease-out;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: white;
+      max-width: 600px;
+      margin-top: 20px;
+      animation: fadeInUp 3s ease-out;
+    }
+
+    .heart {
+      position: absolute;
+      top: -50px;
+      font-size: 2rem;
+      color: red;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      background-color: white;
+      color: #ff6f91;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+      animation: fadeInUp 4s ease-out;
+    }
+
+    button:hover {
+      background-color: #ffe3e3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>haii sayaaangggkuuu zahraaa auroraaaa i lovee youuu somuchh 💕</h1>
+  <p>akuuuu buattt iniii untukk kamuuu sayaanggkuuu cintaaakuuu! 💖</p>
+  <button onclick="showMessage()">Klik aku 💌</button>
+
+  <!-- JS Hearts -->
+  <script>
+    function showMessage() {
+      alert("semoga makin sayangg samaku yaa dari raja iblis padil 💕");
+    }
+
+    // Generate falling hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
